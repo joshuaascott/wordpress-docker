@@ -1,0 +1,8 @@
+.vscode/*
+
+wp-content/*
+
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
