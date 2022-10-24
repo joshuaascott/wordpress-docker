@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    container_name: mysql
+    container_name: wpsql
     image: mysql:latest
     volumes:
       - db_data:/var/lib/mysql
@@ -15,7 +15,7 @@ services:
   phpmyadmin:
     depends_on:
       - db
-    container_name: phpmyadmin
+    container_name: wppma
     image: phpmyadmin/phpmyadmin
     ports:
       - 8001:80
@@ -25,7 +25,7 @@ services:
   wordpress:
     depends_on:
       - db
-    container_name: wordpress
+    container_name: wpweb
     image: wordpress:latest
     ports:
       - "80:80"
